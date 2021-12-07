@@ -16,8 +16,11 @@ import java.util.Collection;
 public class Livro {
     @ManyToOne()
     private Editora editora;
-    @ManyToMany()
+    @JoinColumn(name = "codigoEditora")
+
+    @ManyToMany //N-N unidirecional
     private Collection<Autor> autores;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long codigo;

@@ -18,7 +18,7 @@ import java.util.Collection;
 @Setter
 @Entity
 public class Autor {
-    private Collection<Livro> livro;
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long codigo;
     private String primeiroNome;
